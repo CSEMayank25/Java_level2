@@ -1,13 +1,17 @@
+import java.util.*;
 public class Recursions{
-    public static void printNumb(int n){
-        if(n==0){
+    public static void sumOfNumb(int i, int n, int sum){
+        if(i==n){
+            sum+=i;
+            System.out.println(sum);
             return;
         }
-        System.out.println(n);
-        printNumb(n-1);
+        sum+=i;
+        sumOfNumb(i+1, n, sum);
     }
     public static void main(String arg[]){
-        int n=5;
-        printNumb(n);
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sumOfNumb(1, n, 0);
     }
 }
