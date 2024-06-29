@@ -1,17 +1,17 @@
 import java.util.*;
 public class Recursions{
-    public static void sumOfNumb(int i, int n, int sum){
+    public static void factorial(int i,int n, int fact){
         if(i==n){
-            sum+=i;
-            System.out.println(sum);
+            fact=fact*i;
+            System.out.println(fact);
             return;
         }
-        sum+=i;
-        sumOfNumb(i+1, n, sum);
+        fact=fact*i;
+        factorial(i+1, n, fact);
     }
     public static void main(String arg[]){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        sumOfNumb(1, n, 0);
+        factorial(1, n, 1);
     }
 }
